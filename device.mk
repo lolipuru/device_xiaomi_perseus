@@ -90,11 +90,15 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    libchrome.vendor \
-    NfcNci \
+    com.gsma.services.nfc \
+    com.nxp.nfc.nq \
+    nfc_nci.nqx.default \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
+    NQNfcNci \
     Tag \
+    vendor.nxp.hardware.nfc@1.1-service \
     android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2 \
