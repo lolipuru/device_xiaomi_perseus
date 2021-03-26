@@ -58,6 +58,10 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/vendor
+
 # Device fstab
 PRODUCT_PACKAGES += \
     fstab.qcom
@@ -103,6 +107,8 @@ PRODUCT_PACKAGES += \
 # Slider settings
 PRODUCT_PACKAGES += \
     DeviceSettings
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/devicesettings/snd,$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
